@@ -1,17 +1,30 @@
 package org.example;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        int a = 6;
-        int b = 8;
-        System.out.println(Calculate(a,b));
-        System.out.println(StringName(a,b));
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Введите цифру a");
+        int a = sc.nextInt();
+        System.out.println("Введите цифру b");
+        int b = sc.nextInt();
+        sc.nextLine();
+        System.out.println("Введите знак операции");
+        String symbol = sc.nextLine();
+        Calculate(a,b,symbol);
     }
-    public static int Calculate (int a, int b){
-        return a + b;
+
+    public static void Calculate(int a, int b, String symbol) {
+        switch (symbol) {
+            case "+" -> System.out.println(a + b);
+            case "-" -> System.out.println(a - b);
+            case "/" -> System.out.println(a / b);
+            case "*" -> System.out.println(a * b);
+            default -> System.out.println("неверная операция");
+        }
+
     }
-    public static String StringName (int a, int b){
-        return Calculate(a,b) >=0 ? "положительный":"отрицательный";
-    }
+
 
 }
