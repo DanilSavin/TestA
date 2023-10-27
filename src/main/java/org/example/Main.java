@@ -8,7 +8,7 @@ public class Main {
         System.out.println(StringName(a,b));
     }
     public static int Calculate (int a, int b){
-        return a - b;
+        return a + b;
     }
     public static String StringName (int a, int b){
         return Calculate(a,b) >=0 ? "положительный":"отрицательный";
