@@ -15,15 +15,22 @@ public class Main {
         Calculate(a,b,symbol);
     }
 
-    public static void Calculate(int a, int b, String symbol) {
+    public static int Calculate(int a, int b, String symbol) {
         switch (symbol) {
-            case "+" -> System.out.println(a + b);
-            case "-" -> System.out.println(a - b);
-            case "/" -> System.out.println(a / b);
-            case "*" -> System.out.println(a * b);
-            default -> System.out.println("неверная операция");
+            case "+" -> {
+                return a + b;
+            }
+            case "-" -> {
+                return a - b;
+            }
+            case "/" -> {
+                return a / b;
+            }
+            case "*" -> {
+                return a * b;
+            }
+            default -> throw new IllegalArgumentException("Неверная операция" + symbol);
         }
-
     }
 
 
