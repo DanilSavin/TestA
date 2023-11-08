@@ -1,7 +1,11 @@
 package org.example;
 
-public  class Check {
-    public static String checkNumber(int a) {
-        return a % 2 == 0  ? "число положительное" : "Число отрицальное";
+public class Check {
+    public static void checkNumber(int a) {
+        if (a % 2 == 0) {
+            System.out.println("Четная цифра");
+        } else {
+            System.out.println("Не четная цифра");
+        }
     }
 }
