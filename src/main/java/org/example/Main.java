@@ -7,8 +7,10 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         System.out.println("Введите цифру a");
         int a = sc.nextInt();
+        Check.checkNumber(a);
         System.out.println("Введите цифру b");
         int b = sc.nextInt();
+        Check.checkNumber(b);
         sc.nextLine();
         System.out.println("Введите знак операции");
         String symbol = sc.nextLine();
